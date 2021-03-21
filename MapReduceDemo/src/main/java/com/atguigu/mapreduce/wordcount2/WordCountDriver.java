@@ -1,4 +1,4 @@
-package com.atguigu.mapreduce.wordcount;
+package com.atguigu.mapreduce.wordcount2;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -39,8 +39,8 @@ public class WordCountDriver {
         job.setOutputValueClass(IntWritable.class);
 
         // 6 设置输入路径和输出路径
-        FileInputFormat.setInputPaths(job, new Path("C:\\Users\\piupiupiu\\Desktop\\tmp\\hadoop\\input\\inputword"));
-        FileOutputFormat.setOutputPath(job, new Path("C:\\Users\\piupiupiu\\Desktop\\tmp\\hadoop\\output\\outputword"));
+        FileInputFormat.setInputPaths(job, new Path(args[0]));
+        FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
         // 7 提交job
         boolean result = job.waitForCompletion(true);

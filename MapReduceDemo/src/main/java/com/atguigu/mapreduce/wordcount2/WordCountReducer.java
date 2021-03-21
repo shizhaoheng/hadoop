@@ -1,4 +1,4 @@
-package com.atguigu.mapreduce.wordcount;
+package com.atguigu.mapreduce.wordcount2;
 
 
 /**
